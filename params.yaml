@@ -1,0 +1,36 @@
+data:
+  raw_dir: data/raw              # NEU-DET: images + Pascal VOC .xml annotations
+  processed_dir: data/processed  # YOLO format, written by src.prepare_data
+  val_size: 0.15
+  test_size: 0.15
+  seed: 42
+
+train:
+  model: yolo26n.pt             # COCO-pretrained weights (transfer learning)
+  imgsz: 640                    
+  epochs: 60
+  batch: 16
+  patience: 15                  # early stopping on fitness
+  lr0: 0.001
+  optimizer: AdamW
+  workers: 2
+  amp: true
+  seed: 42
+
+eval:
+  conf: 0.001                   # low threshold is standard for mAP computation
+  iou: 0.6
+
+serve:
+  conf: 0.25                    # default confidence threshold for the API / demo
+  iou: 0.5
+
+mlflow:
+  tracking_uri: sqlite:///mlflow.db
+  experiment: neu-det-yolo
+
+paths:
+  models_dir: models
+  metrics_dir: metrics
+  reports_dir: reports
+  runs_dir: runs

@@ -1,0 +1,15 @@
+{
+  "class_names": [
+    "crazing",
+    "inclusion",
+    "patches",
+    "pitted_surface",
+    "rolled-in_scale",
+    "scratches"
+  ],
+  "img_size": 640,
+  "conf": 0.25,
+  "model_name": "best",
+  "architecture": "YOLO26 (NMS-free end-to-end head)",
+  "test_map50": 0.7789037847637944
+}

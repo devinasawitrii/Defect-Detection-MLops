@@ -1,0 +1,37 @@
+{
+  "n_current": 200,
+  "n_reference": 270,
+  "alpha": 0.01,
+  "features": {
+    "brightness": {
+      "ks_stat": 0.5748,
+      "p_value": 1.1506246090424118e-35,
+      "drift": true,
+      "ref_mean": 0.4972,
+      "cur_mean": 0.2771
+    },
+    "contrast": {
+      "ks_stat": 0.4048,
+      "p_value": 2.2498119441988347e-17,
+      "drift": true,
+      "ref_mean": 0.1046,
+      "cur_mean": 0.0895
+    },
+    "n_detections": {
+      "ks_stat": 0.887,
+      "p_value": 1.1815946915548917e-95,
+      "drift": true,
+      "ref_mean": 2.1222,
+      "cur_mean": 0.095
+    },
+    "max_confidence": {
+      "ks_stat": 0.887,
+      "p_value": 1.1815946915548917e-95,
+      "drift": true,
+      "ref_mean": 0.6721,
+      "cur_mean": 0.0333
+    }
+  },
+  "drift_detected": true,
+  "status": "drift"
+}
